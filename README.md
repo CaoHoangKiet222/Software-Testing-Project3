@@ -1,4 +1,4 @@
-# Automation test website [bkel](http://localhost/moodle)
+# Automation test website [moodle](http://localhost/moodle)
 
 ## 📦 Installation
 
