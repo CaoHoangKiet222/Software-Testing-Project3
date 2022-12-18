@@ -6,7 +6,7 @@ from LoginUtils import driver
 
 
 class CreateCourseUtils:
-    URLCREATECOURSE = "http://localhost/moodle/course/edit.php?category=0"
+    URLCREATECOURSE = "http://localhost/course/edit.php?category=0"
 
     @staticmethod
     def run(fName, sName, startDate, endDate, id):
@@ -49,9 +49,9 @@ class CreateCourseUtils:
 
 
 class RemoveCourseUtils:
-    URLREMOVECOURSE = "http://localhost/moodle/course/management.php"
+    URLREMOVECOURSE = "http://localhost/course/management.php"
     REMOVECOURSE_ICON_XPATH = (
-        "//a[starts-with(@href, 'http://localhost/moodle/course/delete.php')]"
+        "//a[starts-with(@href, 'http://localhost/course/delete.php')]"
     )
     DELETECOURSE_BTN_XPATH = "//form[@method='post']//button[@type='submit']"
 

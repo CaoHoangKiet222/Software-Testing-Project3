@@ -1,0 +1,39 @@
+networks:
+  moodle-network:
+
+volumes:
+  moodle_data:
+  mariadb_data:
+
+services:
+  mariadb:
+    image: docker.io/bitnami/mariadb:latest
+    restart: unless-stopped
+    container_name: mariadb
+    networks:
+      - moodle-network
+    volumes:
+      - mariadb_data:/tmp/mariadb
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - MARIADB_USER=bn_moodle
+      - MARIADB_PASSWORD=bitnami
+      - MARIADB_DATABASE=bitnami_moodle
+
+  moodle:
+    image: docker.io/bitnami/moodle:4.1.0-debian-11-r3
+    container_name: moodle
+    networks:
+      - moodle-network
+    ports:
+      - 80:8080
+      - 8443:8443
+    volumes:
+      - moodle_data:/tmp/moodle
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - MOODLE_DATABASE_USER=bn_moodle
+      - MOODLE_DATABASE_PASSWORD=bitnami
+      - MOODLE_DATABASE_NAME=bitnami_moodle
+    depends_on:
+      - mariadb

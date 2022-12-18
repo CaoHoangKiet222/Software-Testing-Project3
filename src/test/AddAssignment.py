@@ -6,8 +6,8 @@ from DateUtils import Date
 class AddAssignmentSuite(unittest.TestCase):
     def test_1(self):
         """Missing assingment name"""
-        username = "admin"
-        password = "Kiet.caohoang2002"
+        username = "user"
+        password = "bitnami"
         courseId = 6
         sessionId = 1
         assignmentName = ""
@@ -31,8 +31,8 @@ class AddAssignmentSuite(unittest.TestCase):
 
     def test_2(self):
         """Maximum of 255 characters for assignment name"""
-        username = "admin"
-        password = "Kiet.caohoang2002"
+        username = "user"
+        password = "bitnami"
         courseId = 6
         sessionId = 1
         assignmentName = "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
@@ -56,8 +56,8 @@ class AddAssignmentSuite(unittest.TestCase):
 
     def test_3(self):
         """Due date cannot be earlier than the allow submissions from date."""
-        username = "admin"
-        password = "Kiet.caohoang2002"
+        username = "user"
+        password = "bitnami"
         courseId = 6
         sessionId = 1
         assignmentName = "Assignment 1"
@@ -81,8 +81,8 @@ class AddAssignmentSuite(unittest.TestCase):
 
     def test_4(self):
         """Remind me to grade by date cannot be earlier than the allow submissions from date."""
-        username = "admin"
-        password = "Kiet.caohoang2002"
+        username = "user"
+        password = "bitnami"
         courseId = 6
         sessionId = 1
         assignmentName = "Assignment 1"
@@ -106,8 +106,8 @@ class AddAssignmentSuite(unittest.TestCase):
 
     def test_5(self):
         """Missing assingment name and due date cannot be earlier than the allow submissions from date."""
-        username = "admin"
-        password = "Kiet.caohoang2002"
+        username = "user"
+        password = "bitnami"
         courseId = 6
         sessionId = 1
         assignmentName = ""
@@ -131,8 +131,8 @@ class AddAssignmentSuite(unittest.TestCase):
 
     def test_6(self):
         """Missing assingment name and remind me to grade by date cannot be earlier than the allow submissions from date."""
-        username = "admin"
-        password = "Kiet.caohoang2002"
+        username = "user"
+        password = "bitnami"
         courseId = 6
         sessionId = 1
         assignmentName = ""
@@ -156,8 +156,8 @@ class AddAssignmentSuite(unittest.TestCase):
 
     def test_7(self):
         """Maximum of 255 characters for assignment name and due date cannot be earlier than the allow submissions from date."""
-        username = "admin"
-        password = "Kiet.caohoang2002"
+        username = "user"
+        password = "bitnami"
         courseId = 6
         sessionId = 1
         assignmentName = "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
@@ -181,8 +181,8 @@ class AddAssignmentSuite(unittest.TestCase):
 
     def test_8(self):
         """Maximum of 255 characters for assignment name and remind me to grade by date cannot be earlier than the allow submissions from date."""
-        username = "admin"
-        password = "Kiet.caohoang2002"
+        username = "user"
+        password = "bitnami"
         courseId = 6
         sessionId = 1
         assignmentName = "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
@@ -206,8 +206,8 @@ class AddAssignmentSuite(unittest.TestCase):
 
     def test_9(self):
         """Missing assingment name and due date cannot be earlier than the allow submissions from date and remind me to grade by date cannot be earlier than the allow submissions from date."""
-        username = "admin"
-        password = "Kiet.caohoang2002"
+        username = "user"
+        password = "bitnami"
         courseId = 6
         sessionId = 1
         assignmentName = ""
@@ -231,8 +231,8 @@ class AddAssignmentSuite(unittest.TestCase):
 
     def test_10(self):
         """Maximum of 255 characters for assignment name and due date cannot be earlier than the allow submissions from date and remind me to grade by date cannot be earlier than the allow submissions from date."""
-        username = "admin"
-        password = "Kiet.caohoang2002"
+        username = "user"
+        password = "bitnami"
         courseId = 6
         sessionId = 1
         assignmentName = "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
@@ -256,8 +256,8 @@ class AddAssignmentSuite(unittest.TestCase):
 
     def test_11(self):
         """Maximum of 255 characters for assignment name and remind me to grade by date cannot be earlier than the due date."""
-        username = "admin"
-        password = "Kiet.caohoang2002"
+        username = "user"
+        password = "bitnami"
         courseId = 6
         sessionId = 1
         assignmentName = "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
@@ -281,8 +281,8 @@ class AddAssignmentSuite(unittest.TestCase):
 
     def test_12(self):
         """Add assingment correctly with nomal assignment name"""
-        username = "admin"
-        password = "Kiet.caohoang2002"
+        username = "user"
+        password = "bitnami"
         courseId = 6
         sessionId = 1
         assignmentName = "Assignment 1"

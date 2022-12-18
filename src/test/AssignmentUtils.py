@@ -1,4 +1,5 @@
 import time
+from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 from LoginUtils import driver
 from DateUtils import DUtils
@@ -19,20 +20,12 @@ class CreateAssignmentUtils:
         time.sleep(2)
 
     @staticmethod
-    def chooseCourse(courseId):
-        driver.find_element(By.XPATH, "//li[@data-key='mycourses']/a").click()
-        driver.implicitly_wait(2)
-        # driver.find_element(
-        #     By.XPATH, "//div[@data-course-id='" + str(courseId) + "']/a"
-        # ).click()
-        driver.find_element(By.XPATH, "//div[@role='listitem']/a").click()
-        time.sleep(2)
+    def chooseSessionInCourse(sessionId):
+        CreateAssignmentUtils.clickUnderstand()
 
         driver.find_element(By.XPATH, "//input[@name='setmode']").click()
-        driver.implicitly_wait(2)
+        time.sleep(2)
 
-    @staticmethod
-    def chooseSessionInCourse(sessionId):
         collapssesection = driver.find_element(
             By.CSS_SELECTOR, "a#collapssesection" + str(sessionId)
         )
@@ -49,6 +42,19 @@ class CreateAssignmentUtils:
 
         driver.find_element(By.XPATH, "//a[@title='Add a new Assignment']").click()
         time.sleep(2)
+
+    @staticmethod
+    def clickUnderstand():
+        try:
+            time.sleep(2)
+            btn = driver.find_element(
+                By.CSS_SELECTOR,
+                "div.modal-content > div.modal-footer button:last-child",
+            )
+            if btn.is_displayed():
+                btn.click()
+        except NoSuchElementException:
+            time.sleep(2)
 
     @staticmethod
     def deleteSessionInCourse(sessionId):

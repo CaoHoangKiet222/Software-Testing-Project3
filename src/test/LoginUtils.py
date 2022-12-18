@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-url = "http://localhost/moodle/login/index.php"
+url = "http://localhost/login/index.php"
 
 
 class LUtils:
@@ -25,6 +25,6 @@ class LUtils:
             userMenu.click()
             driver.find_element(
                 By.XPATH,
-                "//a[starts-with(@href, 'http://localhost/moodle/login/logout.php')]",
+                "//a[starts-with(@href, 'http://localhost/login/logout.php')]",
             ).click()
             time.sleep(2)
