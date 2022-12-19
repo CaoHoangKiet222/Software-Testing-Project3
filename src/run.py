@@ -11,7 +11,7 @@ def main(argv):
         if len(argv) < 2:
             printUsage()
         elif argv[1] == "AddAssignmentSuite":
-            from AddAssignment import AddAssignmentSuite
+            from test.AddAssignment import AddAssignmentSuite
 
             getAndTest(AddAssignmentSuite)
         else:
