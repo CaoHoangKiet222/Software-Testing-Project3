@@ -1,3 +1,4 @@
+import time
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
@@ -32,8 +33,6 @@ class TestAddAssignment:
         CreateAssignmentUtils.addAssignment(
             assignmentName, allowDate, dueDate, remindDate
         )
-        CreateAssignmentUtils.deleteSessionInCourse(sessionId)
-
         try:
             """Submit assignment fail"""
             if driver.find_element(By.ID, "id_submitbutton2").is_displayed():
@@ -41,6 +40,8 @@ class TestAddAssignment:
         except NoSuchElementException:
             """Submit assignment successfully"""
             submitStatus = True
+
+        CreateAssignmentUtils.deleteSessionInCourse(sessionId)
 
         RemoveCourseUtils.run()
 
