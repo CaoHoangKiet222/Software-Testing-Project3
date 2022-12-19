@@ -1,2 +1,2 @@
-./src/test/__pycache__/
-./venv/
+src/test/__pycache__/
+venv/
