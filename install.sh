@@ -5,4 +5,4 @@ python3 -m venv venv && \
   pip3 install -r ./packages.txt
 
 # run docker for moodle
-docker compose up
+docker compose up -d
